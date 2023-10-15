@@ -1,5 +1,5 @@
 # Docker Bay - Personal Docker Practice Center
-Docker Bay is this custom repository that contains a todo app forked from the [Getting Started App's](https://github.com/docker/getting-started-app) [@Docker](https://github.com/docker) repository meant for Docker practice.
+Docker Bay is this custom repository that contains a todo app copied from the [Getting Started App's](https://github.com/docker/getting-started-app) [@Docker](https://github.com/docker) repository meant for Docker practice.
 
 ## Docker Images
 An image is an way of providing an isolated filesystem for a container that is based on it. To work, the image must contain everything the app needs to run, its code, binaries, dependencies etc. The image may also contain environment variables, a default command to run and other metadata.

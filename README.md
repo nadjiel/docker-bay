@@ -89,7 +89,7 @@ That means that slower and less frequent processes such as the download of depen
 This happens because, if it was the other way around, everytime the source code was changed, its copying and the next steps would have to be repeated on the build, including the installation of dependencies. If the dependencies installing is put first, though, they will only have to be reinstalled if some dependency is added, updated or removed from the project, which happens way less often than source code changes.
 
 ### Multi-stage Building
-_Research must be made about this topic_
+_Research must be made about this topic. A useful link is [docs.docker.com](https://docs.docker.com/get-started/09_image_best/#multi-stage-builds)_
 
 ## Docker Containers
 Docker containers are instances of Docker images that can run on a host machine with any OS in the form of an isolated process.

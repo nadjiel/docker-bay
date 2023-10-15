@@ -1,0 +1,34 @@
+# The containers of the project
+services:
+  # The name of the container, which will be automatically also its network alias
+  app:
+    # The image on which this container is based
+    image: node:18-alpine
+    # The initial command to be executed by this container
+    command: sh -c "yarn install && yarn run dev"
+    # The port mapping from the container to the host
+    ports:
+      - 127.0.0.1:3000:3000
+    # Setting the working directory for the next instructions
+    working_dir: /app
+    # Bind mount from the container /app to the host current directory
+    volumes:
+      - ./:/app
+    # The evironment variables
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: docker-bay
+
+  mysql:
+    image: mysql:8.0
+    # The volume of this container
+    volumes:
+      - mysql-vol:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: docker-bay
+
+volumes:
+  mysql-vol:

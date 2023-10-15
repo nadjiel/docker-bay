@@ -1,0 +1,2 @@
+# Ignore the node_modules on image building
+node_modules
